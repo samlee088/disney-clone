@@ -15,6 +15,10 @@ function Header() {
           className="cursor-pointer invert"
         />
       </Link>
+
+      <div className="flex space-x-2">
+        
+      </div>
     </header>
   );
 }
