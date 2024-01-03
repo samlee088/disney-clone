@@ -5,7 +5,7 @@ import { ThemeToggler } from "./ThemeToggler";
 
 function Header() {
   return (
-    <header>
+    <header className="fixed w-full z-20 top-0 flex items-center justify-center p-5 bg-gradient">
       <Link href="/">
         Click Me
         <Image
@@ -13,7 +13,7 @@ function Header() {
           alt="Disney Logo"
           width={120}
           height={100}
-          className="cursor-pointer invert"
+          className="cursor-pointer invert-0 dark:invert"
         />
       </Link>
 
