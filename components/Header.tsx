@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import { ThemeToggler } from "./ThemeToggler";
+import SearchInput from "./SearchInput";
 
 function Header() {
   return (
@@ -18,6 +19,7 @@ function Header() {
       </Link>
 
       <div className="flex space-x-2">
+        <SearchInput />
         <ThemeToggler />
       </div>
     </header>
