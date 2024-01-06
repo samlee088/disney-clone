@@ -44,3 +44,22 @@ export async function getPopularMovies() {
 
   return data.results;
 }
+
+export async function getDiscoverMovies(id?: string, keywords?: string) {
+  const url = new URL(`https://api.themoviedb.org/3/discover/movie`);
+
+  keywords && url.searchParams.set("with_keywords", keywords);
+  id && url.searchParams.set("with_genres", id);
+
+  const data = fetchFromTMDB(url);
+  return (await data).results;
+}
+
+export async function getSearchedMovies(term: string) {
+  const url = new URL("https://api.themoviedb.org/3/search/movie");
+
+  url.searchParams.set("query", term);
+
+  const data = await fetchFromTMDB(url);
+  return data.results;
+}
